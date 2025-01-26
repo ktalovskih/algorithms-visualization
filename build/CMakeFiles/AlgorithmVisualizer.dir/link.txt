@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/AlgorithmVisualizer.dir/src/main.cpp.o -o AlgorithmVisualizer  libglad.a -lglfw -lGL -ldl -lpthread -lX11 

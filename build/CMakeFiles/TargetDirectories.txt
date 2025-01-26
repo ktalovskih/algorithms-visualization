@@ -1,4 +1,0 @@
-/home/zxc/practice/algorithms-visualization/build/CMakeFiles/glad.dir
-/home/zxc/practice/algorithms-visualization/build/CMakeFiles/AlgorithmVisualizer.dir
-/home/zxc/practice/algorithms-visualization/build/CMakeFiles/edit_cache.dir
-/home/zxc/practice/algorithms-visualization/build/CMakeFiles/rebuild_cache.dir
