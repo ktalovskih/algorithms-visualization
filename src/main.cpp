@@ -13,7 +13,9 @@ void processInput(GLFWwindow* window) {
         glfwSetWindowShouldClose(window, true);
 }
 
-// Vertex shader source code
+int a = 20;
+
+// Vertex shader source code 123
 const char* vertexShaderSource = R"(
 #version 330 core
 layout (location = 0) in vec3 aPos; // Vertex position
