@@ -1,0 +1,37 @@
+# Ignore build directory
+/build/
+
+# Ignore CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore Visual Studio Code settings (optional)
+.vscode/
+
+# Ignore temporary system files
+*.tmp
+*.log
+*.swp
+
+# Ignore executables and compiled object files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# Ignore debug and profiling files
+*.pdb
+*.profraw
+
+# Ignore dependency binaries (optional if using submodules)
+dependencies/glfw/build/
+dependencies/glad/build/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
