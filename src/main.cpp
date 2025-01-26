@@ -37,6 +37,7 @@ void main() {
 
 int main() {
     // Initialize GLFW
+    //sadsasd
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return -1;
