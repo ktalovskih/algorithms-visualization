@@ -5,7 +5,6 @@ template <typename T>
 class BubbleSort : public SortingAlgorithm<T>
 {
 private:
-    //size_t n = this->arr * this->arr;
     int i;
     int j;
 public:
@@ -19,7 +18,7 @@ public:
 };
 
 template <typename T>
-inline BubbleSort<T>::BubbleSort(const std::vector<T>& _arr) : SortingAlgorithm<T>(_arr), i(0), j(0)  // присвоил значение для переменных ибо цыкл сортировки не запускалсяу меня
+inline BubbleSort<T>::BubbleSort(const std::vector<T>& _arr) : SortingAlgorithm<T>(_arr), i(0), j(0)  // присвоил значение для переменных ибо цикл сортировки не запускалсяу меня
 {
 
 }
@@ -53,4 +52,3 @@ void BubbleSort<T>::clearIndices(){  // без очиски следующий �
 }
 
 #endif // BUBBLESORT_H_
-

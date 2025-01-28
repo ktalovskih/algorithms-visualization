@@ -20,6 +20,7 @@ public:
     const std::vector<T>& getArray() const;
 
     void setNewVector(const std::vector<T>& _arr);
+
 };
 
 template<typename T>
@@ -35,7 +36,7 @@ const std::vector<T>& SortingAlgorithm<T>::getArray() const
 }
 
 template <typename T>
-void SortingAlgorithm<T>::setNewVector(const std::vector<T>& _arr){  // скопировал параметры из конструктора, если что поправь
+void SortingAlgorithm<T>::setNewVector(const std::vector<T>& _arr){  // скопировал параметры из конструктора, если что поправь. //ВСЕ ОК ВРОДЕ БЫ 
     this->arr = _arr;
 }
 
