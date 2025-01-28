@@ -14,9 +14,8 @@ int main() {
     for (auto element : arr){
         std::cout << element << " ";
     }
-    std::cout << std::endl;
+    std::cout << "\n\n";
     
-
     arr = bl.getArray();
 
     while(!bl.isComplecte()){
@@ -27,7 +26,31 @@ int main() {
         }
         std::cout << std::endl;
     }
+    bl.clearIndices();
     
+
+    std::cout << "\nвторой вызов\n\n";    
+    std::vector<int> arr2 = {3, 1, 5, 2, -3, 89, 4, 54, 12, 23, 32, 15};
+    bl.setNewVector(arr2);
+
+    arr = arr2;
+
+    for (auto element : arr){
+        std::cout << element << " ";
+    }
+    std::cout << "\n\n";
+
+    while(!bl.isComplecte()){
+        bl.sort();
+
+        for (auto& num : bl.getArray()) {
+            std::cout << num << " ";
+        }
+        std::cout << std::endl;
+    }
+    bl.clearIndices();
+
+
     // glfwInit();
 
     // glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
