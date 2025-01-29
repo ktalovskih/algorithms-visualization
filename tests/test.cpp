@@ -89,4 +89,5 @@ TEST(BubbleSortTest, ReuseSorter) {
     }
 
     EXPECT_EQ(sorter.getArray(), expected2);
+    
 }
