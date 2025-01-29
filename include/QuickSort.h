@@ -34,6 +34,8 @@ template <typename T>
 inline void QuickSort<T>::quickSort(std::vector<T>& arr, int low, int high)
 {
     if (low < high) {
+        this->addToChronology(this->arr); // впихнул addToChronology
+
         int pivot = partition(arr,low,high);
 
         quickSort(arr,low, pivot-1);

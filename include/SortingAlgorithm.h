@@ -9,6 +9,8 @@ class SortingAlgorithm
 protected:
 
     std::vector<T> arr;
+
+    std::vector<std::vector<T>> chronology;
     
 public:
     explicit SortingAlgorithm(const std::vector<T>& _arr); 
@@ -20,6 +22,12 @@ public:
     const std::vector<T>& getArray() const;
 
     void setNewVector(const std::vector<T>& _arr);
+
+    const std::vector<std::vector<T>> getChronology() const;
+
+    void addToChronology(const std::vector<T>& _arr);
+
+    void clearChronology();
 
 };
 
@@ -38,6 +46,21 @@ const std::vector<T>& SortingAlgorithm<T>::getArray() const
 template <typename T>
 void SortingAlgorithm<T>::setNewVector(const std::vector<T>& _arr){  // скопировал параметры из конструктора, если что поправь. //ВСЕ ОК ВРОДЕ БЫ 
     this->arr = _arr;
+}
+
+template <typename T>
+const std::vector<std::vector<T>> SortingAlgorithm<T>::getChronology() const{
+    return this->chronology;
+}
+
+template <typename T>
+void SortingAlgorithm<T>::addToChronology(const std::vector<T>& _arr){
+    this->chronology.push_back(_arr);
+}
+
+template <typename T>
+void SortingAlgorithm<T>::clearChronology(){
+    this->chronology = std::vector<std::vector<T>>();
 }
 
 

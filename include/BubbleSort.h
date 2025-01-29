@@ -26,10 +26,14 @@ inline BubbleSort<T>::BubbleSort(const std::vector<T>& _arr) : SortingAlgorithm<
 template <typename T>
 inline void BubbleSort<T>::sort()
 {
+    if(this->chronology.size() == 0) this->addToChronology(this->arr); // впихнул addToChronology
+
     if (i < this->arr.size()) {
         if (j < this->arr.size() - i - 1) {  // отнимаю единицу, потому что на последней итерации, я так понимаю, происходит выход за границы массива и в итоге вместо 67 получаю 0
             if (this->arr[j] > this->arr[j + 1]) {
                 std::swap(this->arr[j], this->arr[j + 1]);
+
+                this->addToChronology(this->arr); // впихнул addToChronology
             }
             ++j;
         } else {
