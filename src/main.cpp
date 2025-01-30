@@ -3,71 +3,83 @@
 #include <iostream>
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
 
 
 int main() {
 
-    std::vector<int> data = {3,2,5,0,1,8,7,6,9,4};
+    // quick
+
+    // std::vector<int> data = {3,2,5,0,1,8,7,6,9,4};
     
-    QuickSort<int> sorter(data);
-    sorter.sort();
+    // QuickSort<int> sorter(data);
+    // sorter.sort();
 
-    for (auto& i : data){
-        std::cout << i << " ";
-    }
+    // for (auto& i : data){
+    //     std::cout << i << " ";
+    // }
 
-    std::cout << "\n\n";
+    // std::cout << "\n\n";
     
-    for(auto& vec : sorter.getChronology()){
-        for(auto& i : vec){
-            std::cout << i << " ";
-        }
-        std::cout << "\n";
-    }
+    // for(auto& vec : sorter.getChronology()){
+    //     for(auto& i : vec){
+    //         std::cout << i << " ";
+    //     }
+    //     std::cout << "\n";
+    // }
 
-    std::cout << "\n\n";
+    // std::cout << "\n\n";
 
+    // // bubble
 
-    //-------------------------------------------------------------------------------------------
-    // есть идея просто создать поле класса - двумерный массив, в который                       |
-    // будут записываться измененные массивы после каждой итерации, что-то                      |
-    // типа массива хронологии, и когда дойдем до графики, то будем рисовать по этой хронологии |
-    // обнова: я его сделал, если фигня, то делай откат                                         |
-    //                                                                                          |
-    // тесты я не смотрел - траблы с cmake, надо будет потом разобраться что не так             |
-    // (мб из-за того что в gtest у меня пусто)                                                 |
-    //----------------------------------------------------------------------------------------  |
-    //                                                                                        \_/
+    // std::vector<int> arr1 = {3,2,5,0,1,8,7,6,9,4};
 
+    // BubbleSort<int> bl(arr1);
 
-    //хорошая идея с хронологией, мне нравится 
-    //исправил почему не работали gtests 
-    std::vector<int> arr1 = {3,2,5,0,1,8,7,6,9,4};
+    // auto arr = bl.getArray();
 
-    BubbleSort<int> bl(arr1);
-
-    auto arr = bl.getArray();
-
-    for (auto element : arr){
-        std::cout << element << " ";
-    }
+    // for (auto element : arr){
+    //     std::cout << element << " ";
+    // }
     
-    arr = bl.getArray();
+    // arr = bl.getArray();
 
-    while(!bl.isComplecte()){
-        bl.sort();
+    // while(!bl.isComplecte()){
+    //     bl.sort();
+    // }
+    // bl.clearIndices();
+
+    // std::cout << "\n\n";
+    // for(auto& vec : bl.getChronology()){
+    //     for(auto& i : vec){
+    //         std::cout << i << " ";
+    //     }
+    //     std::cout << "\n";
+    // }
+
+    // std::cout << "\n";
+
+    // merge
+
+    std::vector<int> arr2 = {3,2,5,0,1,8,7,6,9,4};
+
+    // почитал в wiki что такое merge sort и попробовал сделать его
+    // надеюсь что это то что нужно НО НЕ УВЕРЕН НА СТО ПРОЦ
+    // есть проблема - я еще не придумал пока что как записать хронологию для этой сортировки
+
+    MergeSort ms(arr2);
+
+    for(auto& el : ms.getArray()){
+        std::cout << el << " ";
     }
-    bl.clearIndices();
-
     std::cout << "\n\n";
-    for(auto& vec : bl.getChronology()){
-        for(auto& i : vec){
-            std::cout << i << " ";
-        }
-        std::cout << "\n";
-    }
 
-    std::cout << "\n";
+    ms.sort();
+
+    for(auto& el : ms.getArray()){
+        std::cout << el << " ";
+    }
+    std::cout << "\n\n";
 
     return 0;
 }

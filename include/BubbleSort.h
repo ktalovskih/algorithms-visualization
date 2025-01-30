@@ -1,6 +1,8 @@
 #ifndef BUBBLESORT_H_
 #define BUBBLESORT_H_
+
 #include "SortingAlgorithm.h"
+
 template <typename T>
 class BubbleSort : public SortingAlgorithm<T>
 {
